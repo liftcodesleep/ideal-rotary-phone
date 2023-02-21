@@ -1,0 +1,54 @@
+<html>
+<script defer type="text/javascript" src="../public/js/viewpost.js"></script>
+
+<body>
+  <header>
+    <title>Post Viewing Page</title>
+  </header>
+  <main>
+    <div class="posting-box">
+      <div class="post-frame" id="post-frame">
+        <div class="title-frame">
+          {{currentPost.title}}
+        </div>
+        <div class="username-frame">
+          {{currentPost.username}}
+        </div>
+        <p class="date-posted">{{formatDate currentPost.createdAt}}</p>
+      </div>
+      <div class="image-frame">
+        <img class="image-container" src="/{{currentPost.image}}" />
+      </div>
+      <div class="post-description"> {{currentPost.description}}
+      </div>
+      <div class="comment-section">
+        {{#if isLoggedIn}}
+        <form action="">
+          <div class="comment-box">
+            <textarea id="comment-text" class="comment-box-text" style="resize: none;" cols="80"
+              placeholder="Leave a comment" onfocus="this.value=''"></textarea>
+            <input type="button" class="comment-button" id="comment-button" value="Comment"
+              data-postid="{{currentPost.id}}" aria-hidden="true">
+          </div>
+        </form>
+        {{else}}
+        <div class="loginToComment">
+          <a href="/login">Log in to join the conversation!</a>
+        </div>
+        {{/if}}
+        <div class="comments-count">
+          {{currentPost.comments.length}} COMMENT(S)
+        </div>
+
+        <div class="comments" id="comment-list">
+          {{#each currentPost.comments}}
+          {{> comment}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<footer></footer>
+
+</html>

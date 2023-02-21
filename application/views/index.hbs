@@ -1,0 +1,25 @@
+<html>
+{{!-- TODO: Fix background with multiple rows
+fix positioning/flexbox/grid
+make footer transparent? --}}
+
+<body>
+  <h1>Recent Posts</h1>
+  <br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <main>
+    <div class="index-container">
+      {{#each results}}
+      <div class="thumbnail-sheet" id="thumbnail-sheet">
+        <div class="recentPosts">
+          <a href="/posts/{{this.id}}"><img src="/{{this.thumbnail}}" alt=""></a>
+        </div>
+        <div class="thumbnail-title-link"><a href="/posts/{{this.id}}">{{this.title}}</a></div>
+      </div>
+      {{/each}}
+    </div>
+  </main>
+</body>
+
+
+</html>

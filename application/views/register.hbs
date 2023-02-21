@@ -1,0 +1,54 @@
+<html>
+
+<body>
+  <header>
+    <script defer type="text/javascript" src="../public/js/registration.js"></script>
+    <title>Registering Page</title>
+    <h1>Register now!</h1>
+  </header>
+
+  <main>
+    <div class="register">
+      <form id="reg-form" method="POST" action="../users/register" enctype="application/x-www-form-urlencoded"
+        onsubmit="event.preventDefault(); javascript:pwValidation();">
+        <label for="username"><b>Username</b></label>
+        <br>
+        <input id="username" type="text" placeholder="Enter Username" name="username" required>
+        <br>
+
+        <label for="email"><b>Email</b></label>
+        <br>
+        <input id="email" type="email" placeholder="Enter Email" name="email" required>
+        <br>
+
+        <label for="password"><b>Password</b></label>
+        <br>
+        <input id="password" type="password" placeholder="Enter Password" name="password" required>
+        <br>
+
+        <label for="cpsw"><b>Confirm Password</b></label>
+        <br>
+        <input id="cpsw" type="password" placeholder="Confirm Password" name="cpsw" required>
+        <br>
+
+        <a href="#">
+          <label for="13+">I am 13 years of age or older</label>
+          <input type="checkbox" id="13+" required>
+        </a>
+        <br>
+        <a href="#">
+          <label for="tc">Terms and Conditions</label>
+          <input type="checkbox" id="tc" name="tc" required>
+        </a>
+        <br>
+        <input type="submit" value="Register"></input>
+      </form>
+    </div>
+
+  </main>
+  <div class="error-box">
+    <h1 id="message"></h1>
+  </div>
+</body>
+
+</html>

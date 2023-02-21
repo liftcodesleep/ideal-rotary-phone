@@ -1,0 +1,47 @@
+<html>
+
+<header>
+  <title>Image Posting Page</title>
+</header>
+
+<body>
+
+  <!--Main layout-->
+  <h1>
+    Upload your image here!
+  </h1>
+  <main>
+    <form id="post-image" class="input-form" action="/posts/create" method="post" enctype="multipart/form-data">
+      <div class="upload">
+        <br>
+
+        <label for="title"><b>Title: </b></label>
+        <input type="text" placeholder="Document Title" name="title" required>
+        <br>
+
+        <p>
+          <input type="file" id="imageFile" accept="image/*" name="uploadImage" />
+        </p>
+
+        <label for="description"><b>Description: </b></label>
+        <input type="text" placeholder="Enter a Description" name="description" required>
+        <br>
+        <br>
+
+        <a href="#">
+          <label for="AUP">Acceptable Use Policy</label>
+          <input type="checkbox" id="aup" name="aup" required>
+        </a>
+        <br>
+        <br>
+        <button type="submit">Upload</button>
+      </div>
+    </form>
+  </main>
+
+  <!--Main layout-->
+
+
+</body>
+
+</html>

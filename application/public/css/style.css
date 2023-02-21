@@ -1,0 +1,402 @@
+/* *:hover {
+  outline: 1px blue solid;
+} */
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.loginToComment {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.comment-section {
+  margin: auto;
+  width: 50%;
+  background-color: green;
+  max-width: fit-content;
+}
+
+.comments-count {
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  margin-bottom: 10px;
+  background-color: rgb(72, 72, 72);
+  max-width: fit-content;
+
+}
+
+.comment {
+  background-color: rgb(100, 100, 100);
+}
+
+.comment:hover {
+  background-color: rgb(114, 114, 114);
+}
+
+.comments {
+  text-align: left;
+  min-height: 100px;
+  padding-bottom: 10px;
+}
+
+.comment-author {
+  background-color: green;
+}
+
+.comment-date {
+  text-align: right;
+  position: relative;
+  right: 0;
+}
+
+.error-box {
+  font-size: medium;
+}
+
+.navbarH {
+  top: 0;
+  width: 100%;
+  font-size: xx-large;
+  background-color: black;
+  height: 50px;
+}
+
+
+.logout-button {
+  float: inline-end;
+  margin-right: 20px;
+}
+
+.logout-button::after {
+  clear: both;
+}
+
+.upload {
+  background-color: black;
+  width: 25%;
+  position: relative;
+  top: 100px;
+  margin: auto;
+  font-size: x-large;
+}
+
+
+.posting-box {
+  position: relative;
+  top: 100px;
+}
+
+.post-frame {
+  /* background-color: black; */
+  text-align: left;
+  position: relative;
+  left: 250px;
+  max-width: fit-content;
+}
+
+.username-frame {
+  max-width: fit-content;
+  font-size: small;
+}
+
+.title-frame {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: left;
+}
+
+.date-posted {
+  font-size: small;
+}
+
+.image-frame {
+  margin: 0 80px;
+}
+
+.image-container {
+  margin-top: 25px;
+  width: 80%;
+}
+
+.post-description {
+  padding-top: 40px;
+  text-align: center;
+  min-height: 100px;
+}
+
+
+.comment-button {
+  font-size: large;
+}
+
+/*
+
+ *:hover {
+  outline: 1px blue solid;
+}
+ .thumbnail-sheet {
+  position: relative;
+  float: left;
+  max-height: 200px;
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: black;
+  overflow: hidden;
+}
+
+
+
+.recentPosts {
+  position: relative;
+  margin: 40px 25px;
+  float: left;
+  overflow: hidden;
+}
+
+*/
+
+.recentPosts {
+  /* position: relative; */
+  display: flex;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.recentPosts:hover {
+  margin: 13px;
+}
+
+.recentPosts::after {
+  clear: both;
+}
+
+.thumbnail-sheet:hover {
+  cursor: pointer;
+}
+
+.thumbnail-sheet:hover div {
+  /* width: 150px; */
+  /* padding: 8px 15px; */
+  /* margin: 10px; */
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.thumbnail-sheet::after {
+  clear: both;
+}
+
+.index-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.thumbnail-sheet {
+  display: flex;
+  align-content: center;
+  position: relative;
+  /*needed for title link*/
+  overflow: hidden;
+  height: 200px;
+  max-width: 200px;
+  margin: 20px 20px;
+  outline: 2px black solid;
+}
+
+.thumbnail-title-link {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  color: white;
+  font-family: sans-serif;
+  font-size: xx-large;
+  text-shadow:
+    0.05em 0 black,
+    0 0.05em black,
+    -0.05em 0 black,
+    0 -0.05em black,
+    -0.05em -0.05em black,
+    -0.05em 0.05em black,
+    0.05em -0.05em black,
+    0.05em 0.05em black;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+.login {
+  text-shadow: none;
+  text-align: center;
+  background-color: black;
+  width: 25%;
+  position: relative;
+  margin: auto;
+  font-size: x-large;
+}
+
+
+.register {
+  text-align: center;
+  background-color: black;
+  width: 45%;
+  margin: auto;
+  font-size: x-large;
+}
+
+.forgot {
+  text-shadow: none;
+  background-color: black;
+  width: 25%;
+  position: relative;
+  bottom: 0px;
+  margin: auto;
+  font-size: x-large;
+}
+
+.home {
+  float: left;
+  margin-left: 20px;
+}
+
+.home::after {
+  clear: both;
+}
+
+.search-bar {
+  display: inline;
+}
+
+.search-bar::after {
+  clear: both;
+}
+
+#flash-message {
+  Width: 100%;
+  height: 10%;
+  color: whitesmoke;
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  animation: fadeOut 5s;
+  -webkit-animation: fadeOut 5s;
+  -moz-animation: fadeOut 5s;
+  -o-animation: fadeOut 5s;
+  -ms-animation: fadeOut 5s;
+  animation-fill-mode: forwards;
+}
+
+.flash-spacer {
+  padding-top: 72px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.Navbar-loggedOut {
+  float: inline-end;
+  right: 40px;
+  top: 0px;
+}
+
+.Navbar-loggedOut::after {
+  clear: both;
+}
+
+.html {
+  background-color: gray;
+}
+
+body {
+  /* position: relative; */
+  text-align: center;
+  background-color: darkgreen;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 30;
+  color: white;
+  opacity: 100%;
+  text-shadow:
+    0.05em 0 black,
+    0 0.05em black,
+    -0.05em 0 black,
+    0 -0.05em black,
+    -0.05em -0.05em black,
+    -0.05em 0.05em black,
+    0.05em -0.05em black,
+    0.05em 0.05em black;
+}
+
+.page-container {
+  padding-bottom: 100px;
+}
+
+.footer-info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: green;
+  outline: 1px black solid;
+  font-size: large;
+}

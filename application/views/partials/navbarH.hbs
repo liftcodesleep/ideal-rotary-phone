@@ -1,0 +1,29 @@
+<div class="navbarH">
+  <a class="home" rel="noopener" target="_blank" href="../"><img
+      src="https://images.emojiterra.com/twitter/v13.1/512px/1f438.png" width="85" height="42"></a>
+
+  <a class="home" rel="noopener" target="_blank" href="../postimage"><img
+      src="https://ngdi.ubc.ca/files/2014/12/New-Post-Button.png" width="150" height="42"> </a>
+
+  <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
+    <input id="search-text" class="search-text" name="searchEntry" type="text" value="{{searchHistory}}" />
+    <input type="button" class="search-button" id="search-button" value="Search">
+  </form>
+
+  {{#if isLoggedIn}}
+  <a class="logout-button" id="logout-button" rel="noopener" target="_blank" href="../logout"><img
+      src="https://www.clipartmax.com/png/full/200-2003072_logout-button-png-clip-art-at-clker-com-vector-clip-logout-logo.png"
+      height="42"></a>
+  {{else}}
+  <div class="Navbar-loggedOut">
+    <a class="Navbar-signin" href="../login"><img
+        src="https://www.campwoodlibrary.org/site-assets/images/login-button-png-13.png/@@images/image.png" width="150"
+        height="42"></a>
+    <a class="Navbar-signup" title="Sign up" href="../register">
+      <span class="Button-label"><img
+          src="https://freepngimg.com/save/24804-sign-up-button-transparent-background/700x242" width="150"
+          height="42"></span></a>
+    {{/if}}
+  </div>
+
+</div>

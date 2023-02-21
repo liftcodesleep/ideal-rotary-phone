@@ -1,0 +1,64 @@
+<html>
+{{!-- How to create a login system:
+
+Create a login table that holds the password and username from the user. Add any other information you want. You will
+not be storing raw passwords in the database. You should NEVER hold raw passwords anywhere.
+
+When the user completes registration, hash the password a head of time. It's best done in the browser to prevent the
+password to be passed a long the wire (raw passwords should not be intercepted). I recommend using SHA2.
+
+Insert the information into the database.
+
+Create a "sessions" table. It should have the loginID in it (the key from your login table) and a field for a random
+hash. I recommend using GUID; T-SQL should support it but I'm unsure about other databases. Make sure you have an
+expiration method, usually this is done by saving the login time and then calculating if the session has been expired.
+
+When the user logs in, hash the password again using the same algorithm as registration (SHA2 in this case)
+
+On the server, compare the hash in the database to the hash you got from the user. Compare usernames.
+
+If there is a match, proceed to item 8. Otherwise tell the user the login was unsuccesful.
+
+Create a new session in the sessions table. Generate a new GUID and insert it with the loginID of the user.
+
+Give the GUID to the user in the form of a cookie.
+
+Use the GUID in order to track which user is making a request for a page. If the GUID is not found in the sessions
+
+table, kick them to the login page. Otherwise, display the page.
+
+Never expose raw userIds or passwords at any point. You should not even know or be able to decrypt the original
+passwords.
+
+That's a quick breakdown of the basic steps! --}}
+
+<body>
+  <header>
+    <title>Login Page</title>
+  </header>
+  <h1>Login</h1>
+
+  <div class="login">
+    <form id="login-form" class="input-form" action="/users/login" method="POST"
+      enctype="application/x-www-form-urlencoded">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      <br>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <br>
+      <label>Remember me
+        <input type="checkbox" name="remember">
+      </label>
+      <br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+<footer>
+  <div class="Forgot">
+    {{> forgotPW}}
+  </div>
+</footer>
+
+</html>
